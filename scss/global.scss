@@ -1,0 +1,29 @@
+// Load Fonts
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body {
+  height: 3000px;
+	font-family: 'Roboto', sans-serif;
+}
+
+// Global Variables
+$black: #343434;
+$white: #efefef;
+$pure_white: #fff;
+
+
+@mixin tablet_and_under() {
+  @media only screen and (max-width: 992px) {
+    @content;
+  }
+}
+
+@mixin mobile_and_under() {
+  @media only screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin transition_($time) {
+  transition: all $time ease-in-out;
+}
