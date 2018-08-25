@@ -1,6 +1,80 @@
 main {
-  h2 {
-    font-size: 36px;
-    font-weight: 100; 
+  #below-hero-wrapper {
+    margin-top: 60px;
+    margin-bottom: 40px;
+    @include mobile_and_under() {
+      margin-top: 30px;
+    }
+    h2 {
+      font-size: 36px;
+      font-weight: 100;
+      margin-bottom: 20px;
+    }
   }
-} 
+  .squares-container {
+    padding: 0;
+  }
+  .squares-wrapper {
+    display: flex;
+    overflow-x: scroll;
+    .square {
+      min-width: 380px;
+      height: 220px;
+      padding: 20px;
+      h3,
+      p,
+      span {
+        color: $pure_white;
+      }
+      h3 {
+        margin-bottom: 16px;
+        font-weight: 100;
+        font-size: 24px;
+      }
+      p {
+        font-size: 12px;
+        font-weight: 100;
+        line-height: 1.65em;
+        margin-bottom: 20px;
+      }
+      span {
+        font-weight: 700;
+        font-size: 12px;
+        letter-spacing: 0.3px;
+        cursor: pointer;
+        padding: 10px 0;
+        span {
+          display: inline-block;
+          font-weight: 100;
+          margin-left: 6px;
+          transform: translateX(0);
+          @include transition_(0.2s);
+        }
+        &:hover {
+          span {
+            transform: translateX(6px);
+          }
+        }
+      }
+    }
+    .pink {
+      background-color: salmon;
+    }
+    .purple {
+      background-color: purple;
+    }
+    .purple2 {
+      background-color: plum;
+    }
+    .green {
+      background-color: lightgreen;
+    }
+    .image {
+      background-color: lightgrey;
+    }
+    .double-wide {
+      min-width: 600px;
+      background-color: grey;
+    }
+  }
+}
