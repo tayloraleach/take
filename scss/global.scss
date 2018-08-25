@@ -1,15 +1,17 @@
 // Load Fonts
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600i,700');
 
-body {
-  height: 3000px;
-	font-family: 'Open Sans', sans-serif;
-}
-
 // Global Variables
 $black: #343434;
 $white: #efefef;
 $pure_white: #fff;
+
+body {
+  height: 3000px;
+  font-family: 'Open Sans', sans-serif;
+  background: $white;
+}
+
 
 
 @mixin tablet_and_under() {
