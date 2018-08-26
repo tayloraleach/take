@@ -109,15 +109,15 @@ main {
       @include mask(rgba(0, 0, 0, 0.4));
     }
     .custom-image1 {
-      background-image: url(/images/photographer.jpg);
+      background-image: url(../images/photographer.jpg);
       background-position: center;
     }
     .custom-image2 {
-      background-image: url(/images/snow.jpg);
+      background-image: url(../images/snow.jpg);
       background-position: center top;
     }
     .custom-image3 {
-      background-image: url(/images/valley.jpg);
+      background-image: url(../images/valley.jpg);
       background-position: center;
     }
     .double-wide {
@@ -153,7 +153,7 @@ main {
     min-height: 700px;
     margin-top: 100px;
     height: 80vh;
-    background-image: url(/images/chicago.jpg);
+    background-image: url(../images/chicago.jpg);
     background-repeat: no-repeat;
     background-position: center bottom;
     background-attachment: fixed;
