@@ -4,7 +4,23 @@ main {
     font-weight: 100;
     margin-bottom: 20px;
   }
-
+  @mixin mask($opacity) {
+    &:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      height: 100%;
+      background-color: $opacity;
+      z-index: 1;
+    }
+  }
+  /* ========================================================
+  Below hero section
+  ======================================================== */
   #below-hero-wrapper {
     margin-top: 80px;
     margin-bottom: 40px;
@@ -12,12 +28,41 @@ main {
       margin-top: 30px;
     }
   }
+  /* ========================================================
+  Squares section
+  ======================================================== */
   .squares-container {
     padding: 0;
+  }
+  .chunk span {
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 0.3px;
+    cursor: pointer;
+    padding: 10px 0;
+    span {
+      display: inline-block;
+      font-weight: 100;
+      margin-left: 6px;
+      transform: translateX(0);
+      @include transition_(0.2s);
+    }
+    &:hover {
+      span {
+        transform: translateX(6px);
+      }
+    }
   }
   .squares-wrapper {
     display: flex;
     overflow-x: scroll;
+    .chunk {
+      position: relative;
+    }
+    .find-out-more {
+      position: absolute;
+      bottom: 30px;
+    }
     .square {
       min-width: 320px;
       height: 220px;
@@ -36,30 +81,10 @@ main {
         font-size: 24px;
       }
       p {
-        max-width: 280px;
         font-size: 12px;
         font-weight: 100;
         line-height: 1.75em;
         margin-bottom: 20px;
-      }
-      span {
-        font-weight: 700;
-        font-size: 12px;
-        letter-spacing: 0.3px;
-        cursor: pointer;
-        padding: 10px 0;
-        span {
-          display: inline-block;
-          font-weight: 100;
-          margin-left: 6px;
-          transform: translateX(0);
-          @include transition_(0.2s);
-        }
-        &:hover {
-          span {
-            transform: translateX(6px);
-          }
-        }
       }
     }
     .pink {
@@ -80,18 +105,7 @@ main {
       background-repeat: no-repeat;
       background-size: cover;
       position: relative;
-      &:after {
-        content: '';
-        position: absolute;
-        width: 100%;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.4);
-        z-index: 1;
-      }
+      @include mask(rgba(0, 0, 0, 0.4));
     }
     .custom-image1 {
       background-image: url(/images/photographer.jpg);
@@ -110,7 +124,6 @@ main {
       background-color: lightgrey;
     }
   }
-
   .details-section {
     margin-top: 80px;
     h2 {
@@ -119,6 +132,30 @@ main {
     h4 {
       color: $black;
       margin-bottom: 20px;
+    }
+  }
+  /* ========================================================
+  Full width image section
+  ======================================================== */
+  .full-width-image-section {
+    margin-top: 100px;
+    height: 80vh;
+    background-image: url(/images/chicago.jpg);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+    width: 100%;
+    position: relative;
+    @include mask(rgba(0, 0, 0, 0.4));
+    .chunk {
+      margin-top: 35%;
+      z-index: 2;
+      max-width: 350px;
+    }
+    h2,
+    p,
+    span {
+      color: $pure_white;
     }
   }
 }
