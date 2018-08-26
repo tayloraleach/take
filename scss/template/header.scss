@@ -10,13 +10,9 @@ header {
     background-position: center right;
   }
   .logo-container {
-    padding: 0 10px;
-    position: absolute;
-    top: 40px;
-    left: 10%;
+    padding: 40px 0 0 0;
     display: flex;
     align-items: center;
-    justify-content: center;
     .logo {
       width: 30px;
       height: 30px;
@@ -36,15 +32,13 @@ header {
       }
     }
     span {
+      display: inline-block;
       margin-left: 10px;
       font-style: italic;
     }
   }
   .header-caption {
-    padding: 0 10px;
-    position: absolute;
-    top: 30%;
-    left: 10%;
+    padding: 80px 0;
     max-width: 400px;
     @include transition_(0.3s);
     @include tablet_and_under() {
