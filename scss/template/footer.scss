@@ -1,0 +1,87 @@
+footer {
+  background-color: #192431;
+  font-size: 12px;
+  p {
+    font-size: 12px;
+    color: #ccc;
+  }
+  h4 {
+    color: $pure_white;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  .get-in-touch-section {
+    padding: 100px 0 40px 0;
+    .sub-box {
+      padding-bottom: 10px;
+      height: 40px;
+      form {
+        display: flex;
+        input[type=text] {
+          padding: 8px;
+          outline: none;
+          height: 100%;
+          flex: 6;
+          border: none;
+          -webkit-border-radius: 3px 0 0 3px;
+          border-radius: 3px 0 0 3px;
+        }
+        button[type=submit] {
+          outline: none;
+          border: none;
+          max-width: 50px;
+          flex: 1;
+          cursor: pointer;
+          background-color: #82ca9c;
+          color: $pure_white;
+          -webkit-border-radius: 0 2px 2px 0;
+          border-radius: 0 2px 2px 0;
+        }
+        .checkmark {
+          display: inline-block;
+          width: 22px;
+          height: 22px;
+          -ms-transform: rotate(45deg);
+          -webkit-transform: rotate(45deg);
+          transform: rotate(45deg) scale(1.6);
+          .checkmark-stem {
+            background-color: $pure_white;
+            position: absolute;
+            width: 1px;
+            height: 9px;
+            left: 13px;
+            top: 6px;
+          }
+          .checkmark-kick {
+            background-color: $pure_white;
+            position: absolute;
+            width: 3px;
+            height: 1px;
+            left: 10px;
+            top: 14px;
+          }
+        }
+      }
+    }
+    .spam-message {
+      font-size: 10px;
+      color: rgba(255, 255, 255, 0.2);
+    }
+  }
+  .links-section {
+    padding-bottom: 60px;
+    ul {
+      margin: 0 0 40px 0;
+      li {
+        padding: 4px 0;
+        a {
+          color: #ccc;
+          text-decoration: none;
+          &:hover {
+            color: rgba(255, 255, 255, 0.5);
+          }
+        }
+      }
+    }
+  }
+}
