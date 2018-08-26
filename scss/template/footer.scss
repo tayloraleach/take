@@ -12,6 +12,9 @@ footer {
   }
   .get-in-touch-section {
     padding: 100px 0 40px 0;
+    @include mobile_and_under() {
+      padding: 30px 0 0 0;
+    }
     .sub-box {
       padding-bottom: 10px;
       height: 40px;
@@ -70,6 +73,9 @@ footer {
   }
   .links-section {
     padding-bottom: 60px;
+    @include mobile_and_under() {
+      padding-bottom: 0;
+    }
     ul {
       margin: 0 0 40px 0;
       li {

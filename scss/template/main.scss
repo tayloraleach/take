@@ -35,8 +35,11 @@ main {
   ======================================================== */
   #below-hero-wrapper {
     margin: 80px 0;
+    transition: opacity 0.6s ease-in;
+    opacity: 0;
     @include mobile_and_under() {
       margin-top: 30px;
+      margin-bottom: 30px;
     }
   }
   /* ========================================================
@@ -122,8 +125,19 @@ main {
       background-color: lightgrey;
     }
   }
+  /* ========================================================
+  Details section
+  ======================================================== */
   .details-section {
+    transition: opacity 0.6s ease-in;
+    opacity: 0;
     margin-top: 80px;
+    @include mobile_and_under() {
+      margin-top: 30px;
+      p {
+        margin-bottom: 40px;
+      }
+    }
     h2 {
       margin-bottom: 60px;
     }
@@ -148,6 +162,9 @@ main {
     position: relative;
     transform: translateX(0);
     transition: transform 0.3s ease-in;
+    @include mobile_and_under() {
+      margin-top: 0;
+    }
     @include mask(rgba(0, 0, 0, 0.5));
     .chunk {
       margin-top: 18%;
@@ -188,6 +205,17 @@ main {
       .col-md-4:last-of-type {
         margin-bottom: 80px;
       }
+      @include mobile_and_under() {
+        h2 {
+          margin: 30px 0;
+        }
+        p {
+          margin-bottom: 40px;
+        }
+        .col-md-4:last-of-type {
+          margin-bottom: 0;
+        }
+      }
     }
   }
 }
@@ -198,6 +226,9 @@ Buy now section
 
 .buy-now-section {
   margin: 80px 0;
+  @include mobile_and_under() {
+    margin: 30px 0 0 0;
+  }
   .buy-now {
     border-radius: 3px;
     margin-bottom: 30px;
